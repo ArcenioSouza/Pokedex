@@ -2,6 +2,7 @@ import React from "react";
 import Card from "../card/Card";
 
 const Cards = ({ databases }) => {
+
   return (
     <div>
       {databases.map((database, index) => {
@@ -9,7 +10,7 @@ const Cards = ({ databases }) => {
           <Card
             key={index}
             name={database.name}
-            image={database.url}
+            image={database.sprites.front_default}
           />
         );
       })}

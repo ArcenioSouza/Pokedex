@@ -8,8 +8,18 @@ const Home = () => {
    const [database, setDatabase] = useState([])
 
    useEffect(() => {
-      pokeData.get("/?limit=20").then((response) => setDatabase(response.data.results))
+      pokeData.get(`/pokemon/?limit=10`).then((response) => {
+         const results = response.data.results
+         results.map((pokemon) => {
+            return(
+               pokeData.get(`/pokemon/${pokemon.name}`).then((response) => {
+                  setDatabase([...database, response.data])
+               })
+            )            
+         })         
+      })
    },[])
+
    console.log(database)
    return (
       <S.Container>

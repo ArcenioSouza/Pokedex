@@ -1,7 +1,7 @@
 import axios from "axios";
 
 export const pokeData = axios.create({
-   baseURL: "https://pokeapi.co/api/v2/pokemon"
+   baseURL: "https://pokeapi.co/api/v2/"
 })
 
 /* export async function getPokemon(){
