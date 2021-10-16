@@ -1,13 +1,15 @@
 import styled from "styled-components";
 
 export const Container = styled.div `
-   width: 300px;
-   height: 300px;
-   border: 1px solid black;
+   width: 250px;
+   height: 250px;
+   border: 2px solid;
+   border-color: ${props => props.color === 'grass' ? "green" : props.color === "water" ? "blue" : "red" };
    border-radius: 5px;
-   background-color: grey;
    display: flex;
    align-items: center;
    justify-content: center;
    flex-direction: column;
+   margin: 5px;
 `
+

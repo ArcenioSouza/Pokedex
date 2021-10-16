@@ -1,10 +1,19 @@
 import React from "react";
+import styled from "styled-components";
 import Card from "../card/Card";
+
+const Container = styled.div `
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  height: 260px;
+  overflow-y: scroll;
+`
 
 const Cards = ({ databases }) => {
 
   return (
-    <div>
+    <Container>
       {databases.map((database) => {
         return (
           <Card
@@ -16,7 +25,7 @@ const Cards = ({ databases }) => {
           />
         );
       })}
-    </div>
+    </Container>
   );
 };
 
