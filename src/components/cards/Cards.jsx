@@ -5,12 +5,14 @@ const Cards = ({ databases }) => {
 
   return (
     <div>
-      {databases.map((database, index) => {
+      {databases.map((database) => {
         return (
           <Card
-            key={index}
+            key={database.id}
+            id={database.id}
             name={database.name}
             image={database.sprites.front_default}
+            type={database.types[0].type.name}
           />
         );
       })}

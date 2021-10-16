@@ -1,12 +1,14 @@
 import React from 'react'
 import * as S from './Styled'
 
-const Card = ({image, name}) => {
+const Card = ({id, image, name, type}) => {
 
    return (
       <S.Container>
-            <h1>{name}</h1>
-            <img src={image} alt={name} /> 
+         <p>{id}</p>
+         <h1>{name}</h1>
+         <img src={image} alt={name} />
+         <p>{type}</p> 
       </S.Container>
    )
 }
