@@ -5,7 +5,9 @@ const Card = ({id, image, name, type}) => {
 
    return (
       <S.Container color={type}>
-         <p>{id}</p>
+         <S.Id>
+            <p>{id}</p>        
+         </S.Id>
          <h1>{name}</h1>
          <img src={image} alt={name} />
          <p>{type}</p> 

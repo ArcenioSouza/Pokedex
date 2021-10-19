@@ -1,17 +1,22 @@
 import React from 'react'
 import * as S from './Styled'
+import { useState } from 'react'
 
-const Navbar = () => {
+const Navbar = ({setDatabase}) => {
+
+   const [search, setSearch] = useState("")
+
    return (
       <S.Container>
          <div>
             <img src="http://midia.gruposinos.com.br/_midias/jpg/2016/07/13/pikachu-1590127.jpg" alt="Pikachu" />
          </div>
          <S.SerchArea>
-            <h1>My Pokedex</h1>
+            <h1>Pokedex</h1>
             <S.SerchArea>
                <label htmlFor="search">Search Pokemon</label>
-               <S.Input type="text" name="search"/>
+               <S.Input type="text" name="search" value={search} onChange={(e) => setSearch(e.target.value)}/>
+               <button>Pesquisar</button>
             </S.SerchArea>
            
          </S.SerchArea>

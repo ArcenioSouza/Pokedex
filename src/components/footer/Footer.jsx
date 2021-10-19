@@ -10,9 +10,9 @@ const Footer = ({databases}) => {
          </S.Title>
          <S.Images>
             <S.ImgPoke>
-               {databases.map((dataImage) => {
+               {databases.map((dataImage, index) => {
                   return(
-                     <img src={dataImage.sprites.front_default} alt="footerPokemon" />            
+                     <img src={dataImage.sprites.front_default} key={index} alt="footerPokemon" />           
                   )
                })}
             </S.ImgPoke>

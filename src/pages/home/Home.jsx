@@ -22,8 +22,8 @@ const Home = () => {
         })
       ).then(
          (data) => setDatabase(data)
-      )
-      console.log(database)     
+         
+      )   
     });
   },[]);
 
@@ -31,7 +31,7 @@ const Home = () => {
     <S.Container>
       <Navbar/>
       <Cards databases={database} />
-      <Footer databases={database}/>
+      {/* <Footer databases={database}/> */}
     </S.Container>
   );
 };

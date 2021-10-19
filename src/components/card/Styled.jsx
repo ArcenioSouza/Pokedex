@@ -13,3 +13,9 @@ export const Container = styled.div `
    margin: 5px;
 `
 
+export const Id = styled.div `
+   width: 10%;
+   top: 0;
+   position: initial;
+`
+
