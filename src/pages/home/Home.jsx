@@ -1,7 +1,7 @@
 import React from "react";
 import { useState, useEffect } from "react";
 import { pokeData } from "../../services/Api";
-import Cards from "../../components/cards/Cards";
+/* import Cards from "../../components/cards/Cards"; */
 import * as S from "./Styled";
 import Navbar from "../../components/header/Navbar";
 import Footer from "../../components/footer/Footer";
@@ -30,8 +30,7 @@ const Home = () => {
   return (
     <S.Container>
       <Navbar/>
-      <Cards databases={database} />
-      {/* <Footer databases={database}/> */}
+      <Footer/>
     </S.Container>
   );
 };
